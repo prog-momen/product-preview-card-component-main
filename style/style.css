@@ -1,117 +1,147 @@
-* {
-  margin: 0;
-  padding: 0;
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+}
+
+article {
+  background-color: #FFF;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+  
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: hsl(30, 38%, 92%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
-}
-
-.card {
-  background-color: white;
-  border-radius: 10px;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-@media (min-width: 600px) {
-  .card {
-    flex-direction: row;
-  }
-}
-
-.card img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-}
-
-.card-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.product-category {
-  text-transform: uppercase;
-  color: hsl(228, 12%, 48%);
-  font-size: 0.75rem;
-  letter-spacing: 1.5px;
-}
-
-.product-title {
-  font-size: 1.5rem;
-  margin: 10px 0;
-  color: hsl(228, 12%, 20%);
-}
-
-.product-description {
-  font-size: 0.875rem;
+  background-color: #F2EAE2;
+  display: grid;
   line-height: 1.5;
-  color: hsl(228, 12%, 48%);
-  margin-bottom: 15px;
+  min-height: 100vh;
+  padding: 0.75rem;
+  place-items: center;
+  -webkit-font-smoothing: antialiased;
 }
 
-.price {
-  display: flex;
+button {
   align-items: center;
-  margin-bottom: 20px;
+  background-color: #3D8168;
+  border-radius: 0.5rem;
+  border: none; 
+  color: #FFF;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  gap: 0.8rem;
+  justify-content: center;
+  padding: 1rem;
+  transition: all 0.3s;
 }
 
-.current-price {
-  font-size: 1.5rem;
-  color: hsl(158, 36%, 37%);
-  margin-right: 10px;
+button:hover {
+  background-color: #1A4032;
+}
+
+.description {
+  font-size: 0.875rem;
+}
+
+.desktop-parfume-img {
+  display: none;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.mobile-parfume-img {
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+  display: block;
+  width: 100%;
+}
+
+.new-price {
+  color: #3D8168;
 }
 
 .old-price {
-  font-size: 0.875rem;
+  font-size: 0.813rem;
   text-decoration: line-through;
-  color: hsl(228, 12%, 48%);
 }
 
-.btn {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  background-color: hsl(158, 36%, 37%);
-  color: white;
-  width: 100%;
-  padding: 15px;
-  text-align: center;
-  border-radius: 8px;
-  font-weight: bold;
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.price-line {
+  align-items: center;
+  display: flex;
+  gap: 1.5em;
+}
+
+.product-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.313em;
   text-transform: uppercase;
-  cursor: pointer;
-  border: none;
 }
 
-.btn:hover {
-  background-color: hsl(158, 42%, 30%);
-}
-.btn img {
-  width: 40px; 
-  height: auto; 
-  margin-right: 8px; 
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1.5rem;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  margin-top: 20px;
+.text-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+/*Tablet & Desktop sizes*/
+@media screen and (min-width: 600px) {
+  article {
+      background-color: #FFF;
+      flex-direction: row;
+      width: fit-content;
+      max-width: 37.5rem;
+  }
+
+  .desktop-parfume-img {
+      border-bottom-left-radius: 0.625rem;
+      border-top-left-radius: 0.625rem;
+      border-top-right-radius: 0;   
+      display: block;
+      max-width: 300px;
+      width: 100%;
+  }
+
+  .mobile-parfume-img {
+      display: none;
+  }
+
+  section {
+      justify-content: space-between;
+      padding: 2rem;
+  }
+
+  .text-info {
+      gap: 1.5rem;
+  }
 }

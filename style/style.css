@@ -18,7 +18,7 @@ article {
   font-size: 11px; 
   text-align: center; 
 }
-  
+
 .attribution a { 
   color: hsl(228, 45%, 44%); 
 }
@@ -57,6 +57,7 @@ button:hover {
   font-size: 0.875rem;
 }
 
+/* Desktop image hidden by default */
 .desktop-parfume-img {
   display: none;
 }
@@ -114,34 +115,36 @@ section {
   gap: 1em;
 }
 
-/*Tablet & Desktop sizes*/
+/* Tablet & Desktop sizes */
 @media screen and (min-width: 600px) {
   article {
-      background-color: #FFF;
-      flex-direction: row;
-      width: fit-content;
-      max-width: 37.5rem;
+    background-color: #FFF;
+    flex-direction: row;
+    width: fit-content;
+    max-width: 37.5rem;
   }
 
+  /* Show desktop image on larger screens */
   .desktop-parfume-img {
-      border-bottom-left-radius: 0.625rem;
-      border-top-left-radius: 0.625rem;
-      border-top-right-radius: 0;   
-      display: block;
-      max-width: 300px;
-      width: 100%;
+    border-bottom-left-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0;
+    display: block;
+    max-width: 300px;
+    width: 100%;
   }
 
+  /* Hide mobile image on larger screens */
   .mobile-parfume-img {
-      display: none;
+    display: none;
   }
 
   section {
-      justify-content: space-between;
-      padding: 2rem;
+    justify-content: space-between;
+    padding: 2rem;
   }
 
   .text-info {
-      gap: 1.5rem;
+    gap: 1.5rem;
   }
 }
